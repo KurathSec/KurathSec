@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Draw the 88x31 buttons and the blinking cursor as GIFs.
+"""Draw the 88x31 buttons as GIFs and the blinking cursor as an SVG.
 
 Standard library only: python3 tools/build_assets.py
 
@@ -192,9 +192,13 @@ def button(name, first, second, field, ink):
 
 
 def cursor():
-    width, height = 8, 14
-    on, off = [1] * (width * height), [0] * (width * height)
-    gif(OUT / "cursor.gif", width, height, [BLACK, (63, 185, 80)], [on, off], delay=53, transparent=0)
+    # An SVG, because GitHub wraps every GIF in a player element that lifts it off the text line.
+    (OUT / "cursor.svg").write_text(
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 11">'
+        "<style>@media (prefers-reduced-motion:no-preference){rect{animation:blink 1.06s steps(1) infinite}}"
+        "@keyframes blink{50%{opacity:0}}</style>"
+        '<rect width="7" height="11" fill="#3FB950"/></svg>\n'
+    )
 
 
 def main():
