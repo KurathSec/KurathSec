@@ -23,9 +23,12 @@ something useful, a patch or a report to the project involved.
 
 [merged] openssl       <a href="https://github.com/openssl/openssl/pull/33285">#33285</a>     RAND(7): a restore from a saved image
                                   is not detected. all active branches
+[merged] openssl       <a href="https://github.com/openssl/openssl/pull/33508">#33508</a>     RAND(7): a fork that keeps its pid
+                                  continues the generator. 4 branches
 [merged] botan         <a href="https://github.com/randombit/botan/pull/6049">#6049</a>      fork safety guidance for snapshot and
                                   checkpoint restores
 [merged] circl         <a href="https://github.com/cloudflare/circl/pull/704">#704</a>       wycheproof ml-kem vectors: 1,725 cases
+[merged] circl         <a href="https://github.com/cloudflare/circl/pull/705">#705</a>       wycheproof x25519 and x448 vectors
 [merged] pmd           <a href="https://github.com/pmd/pmd/pull/6883">#6883</a>      cognitive complexity counts java
                                   switch expressions. released in 7.27.0
 [tested] botan         <a href="https://github.com/randombit/botan/pull/6054">#6054</a>      maintainer's vm rollback fix: repeats
@@ -33,8 +36,6 @@ something useful, a patch or a report to the project involved.
                                   with it (30/30)
 [review] openssl       <a href="https://github.com/openssl/openssl/pull/33286">#33286</a>     reseed provider drbgs when the linux
                                   vmclock generation counter changes
-[review] openssl       <a href="https://github.com/openssl/openssl/pull/33508">#33508</a>     RAND(7): a fork that keeps its pid
-[review] circl         <a href="https://github.com/cloudflare/circl/pull/705">#705</a>       wycheproof x25519 and x448 vectors
 [review] cargo-mutants <a href="https://github.com/sourcefrog/cargo-mutants/pull/655">#655</a>       --stop-on-missed: stop after the first
                                   missed mutant
 [report] acvp-server   <a href="https://github.com/usnistgov/ACVP-Server/issues/468">#468</a> <a href="https://github.com/usnistgov/ACVP-Server/issues/470">#470</a>  gaps between what fips 203 and 204
